@@ -10,5 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: connect with docker-sync
-      run: wget http://pc.brianlobo.theworkpc.com:5000/api/v1/sync/
+      run: curl pc.brianlobo.theworkpc.com:5000/api/v1/sync/
   
