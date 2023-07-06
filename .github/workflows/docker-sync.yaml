@@ -1,0 +1,13 @@
+name: docker-sync
+
+on:
+  push:
+    main:
+      
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    steps:
+    - name: connect with docker-sync
+      run: curl http://pc.brianlobo.theworkpc.com:5000/api/v1/sync/
+  
