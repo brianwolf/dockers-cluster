@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+    portainer:
+        image: portainer/portainer:linux-amd64-2.0.1
+        container_name: portainer
+        hostname: portainer
+        environment:
+            - VIRTUAL_HOST: portainer.pc.brianlobo.theworkpc.com
+            - VIRTUAL_PORT: 9000
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock:ro
+            - portainer:/data portainer/portainer:rw
+        networks:
+            - docker-net
+        ports:
+            - 9000:9000
+            - 8000:8000
+        command: -H unix:///var/run/docker.sock
+
+networks:
+    docker-net:
+
+
+volumes:
+    portainer:
