@@ -1,0 +1,49 @@
+version: "3.8"
+
+services:
+
+  sonar:
+    container_name: sonar
+    hostname: sonar
+    image: sonarqube:community
+    restart: always
+    environment:
+      SONAR_JDBC_URL: jdbc:postgresql://sonar-postgres:5432/sonar
+      SONAR_JDBC_USERNAME: sonar
+      SONAR_JDBC_PASSWORD: sonar
+    volumes:
+      - sonar:/opt/sonarqube
+    expose:
+      - 9000
+    networks:
+      - docker-net
+    depends_on:
+      - postgres
+
+  sonar-postgres:
+    container_name: sonar-postgres
+    hostname: sonar-postgres
+    image: postgres:15.3
+    restart: always
+    environment:
+      POSTGRES_USER: sonar
+      POSTGRES_DB: sonar
+      POSTGRES_PASSWORD: sonar
+    volumes:
+      - sonar-postgres:/var/lib/postgresql/data
+    networks:
+      - docker-net
+    expose:
+      - 5432
+    healthcheck:
+      start_period: 6s
+
+networks:
+  docker-net:
+    name: docker-net
+
+volumes:
+  sonar:
+    name: sonar
+  sonar-postgres:
+    name: sonar-postgres

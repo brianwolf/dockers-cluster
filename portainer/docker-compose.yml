@@ -11,9 +11,9 @@ services:
             - portainer:/data portainer/portainer:rw
         networks:
             - docker-net
-        ports:
-            - 9000:9000
-            - 8000:8000
+        expose:
+            - 9000
+            - 8000
         command: -H unix:///var/run/docker.sock
 
 networks:
