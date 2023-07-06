@@ -5,6 +5,7 @@ services:
         image: portainer/portainer:linux-amd64-2.0.1
         container_name: portainer
         hostname: portainer
+        restart: always
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock:ro
             - portainer:/data portainer/portainer:rw
