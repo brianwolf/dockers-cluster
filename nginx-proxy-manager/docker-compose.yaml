@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+    nginx-proxy-manager:
+        image: jc21/nginx-proxy-manager:2.10.3
+        container_name: nginx-proxy-manager
+        hostname: nginx-proxy-manager
+        ports:
+            - 80:80
+            - 81:81
+            - 443:443
+        networks:
+            - docker-net
+        volumes:
+            - nginx-proxy-manager:/data
+            - letsencrypt:/etc/letsencrypt
+
+networks:
+    docker-net:
+        name: docker-net
+
+volumes:
+    nginx-proxy-manager:
+        name: nginx-proxy-manager
+    letsencrypt:
+        name: letsencrypt
