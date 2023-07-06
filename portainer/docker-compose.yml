@@ -6,8 +6,8 @@ services:
         container_name: portainer
         hostname: portainer
         environment:
-            - VIRTUAL_HOST: portainer.pc.brianlobo.theworkpc.com
-            - VIRTUAL_PORT: 9000
+            VIRTUAL_HOST: portainer.pc.brianlobo.theworkpc.com
+            VIRTUAL_PORT: 9000
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock:ro
             - portainer:/data portainer/portainer:rw
