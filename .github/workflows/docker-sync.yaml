@@ -10,5 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: connect with docker-sync
-      run: curl --connect-timeout 5 http://pc.brianlobo.theworkpc.com:5000/api/v1/sync/
+      run: wget http://pc.brianlobo.theworkpc.com:5000/api/v1/sync/
   
