@@ -18,7 +18,7 @@ services:
     networks:
       - docker-net
     depends_on:
-      - postgres
+      - sonar-postgres
 
   sonar-postgres:
     container_name: sonar-postgres
