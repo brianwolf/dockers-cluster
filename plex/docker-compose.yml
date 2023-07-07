@@ -10,6 +10,7 @@ services:
       VIRTUAL_HOST: plex.lobo.theworkpc.com
       VIRTUAL_PORT: 32400
       ADVERTISE_IP: http://plex.lobo.theworkpc.com/
+      ALLOWED_NETWORKS: plex.lobo.theworkpc.com
       PUID: 1000
       PGID: 1000
       TZ: America/Argentina/Buenos_Aires
