@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  plex:
+    hostname: plex
+    container_name: plex
+    image: linuxserver/plex:1.32.4
+    restart: always
+    environment:
+      VIRTUAL_HOST: plex.lobo.theworkpc.com
+      VIRTUAL_PORT: 32400
+      PUID: 1000
+      PGID: 1000
+      TZ: America/Argentina/Buenos_Aires
+      VERSION: docker
+    expose:
+      - 32400
+    volumes:
+      - /home/brian/volumes/plex:/media:Z
+      - plex:/config
+    networks:
+      - docker-net
+
+networks:
+  docker-net:
+    name: docker-net
+    external: true
+
+volumes:
+  plex:
+    name: plex
+    external: false

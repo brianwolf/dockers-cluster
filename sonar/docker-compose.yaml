@@ -43,6 +43,7 @@ services:
 networks:
   docker-net:
     name: docker-net
+    external: true
 
 volumes:
   sonar:
