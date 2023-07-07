@@ -9,10 +9,12 @@ services:
     environment:
       VIRTUAL_HOST: series.lobo.theworkpc.com
       VIRTUAL_PORT: 8096
-      # JELLYFIN_PublishedServerUrl: series.lobo.theworkpc.com
+      PUID: 1000
+      PGID: 1000
+      TZ: America/Argentina/Buenos_Aires
+      JELLYFIN_PublishedServerUrl: 152.171.157.88
     volumes:
       - jellyfin:/config
-      - jellyfin:/cache
       - /home/brian/volumes/jellyfin:/media:Z
     expose:
       - 8096
