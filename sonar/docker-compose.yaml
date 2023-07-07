@@ -14,7 +14,7 @@ services:
     volumes:
       - sonar:/opt/sonarqube
     expose:
-      - 9000
+      - 9000 
     networks:
       - docker-net
     depends_on:
