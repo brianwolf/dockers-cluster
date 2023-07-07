@@ -7,7 +7,7 @@ services:
     image: jellyfin/jellyfin:20230707.6-unstable
     restart: always
     environment:
-      VIRTUAL_HOST: media.lobo.theworkpc.com
+      VIRTUAL_HOST: series.lobo.theworkpc.com
       VIRTUAL_PORT: 8096
       JELLYFIN_PublishedServerUrl: series.lobo.theworkpc.com
     volumes:
