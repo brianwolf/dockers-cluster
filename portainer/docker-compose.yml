@@ -6,6 +6,9 @@ services:
         container_name: portainer
         hostname: portainer
         restart: always
+        environment:
+            VIRTUAL_HOST: portainer.lobo.theworkpc.com
+            VIRTUAL_PORT: 9000
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock:ro
             - portainer:/data portainer/portainer:rw
