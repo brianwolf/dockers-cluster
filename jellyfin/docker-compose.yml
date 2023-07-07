@@ -4,7 +4,7 @@ services:
   jellyfin:
     container_name: jellyfin
     hostname: jellyfin
-    image: jellyfin/jellyfin:20230707.6-unstable
+    image: linuxserver/jellyfin:10.8.10
     restart: always
     environment:
       VIRTUAL_HOST: series.lobo.theworkpc.com
