@@ -9,15 +9,13 @@ services:
     environment:
       VIRTUAL_HOST: series.lobo.theworkpc.com
       VIRTUAL_PORT: 8096
-      JELLYFIN_PublishedServerUrl: series.lobo.theworkpc.com
+      # JELLYFIN_PublishedServerUrl: series.lobo.theworkpc.com
     volumes:
       - jellyfin:/config
       - jellyfin:/cache
       - /home/brian/volumes/jellyfin:/media:Z
-    expose:
-      - 8096
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
+    ports:
+      - 8096:8096
 
 networks:
   docker-net:
