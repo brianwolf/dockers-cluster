@@ -14,8 +14,8 @@ services:
       - jellyfin:/config
       - jellyfin:/cache
       - /home/brian/volumes/jellyfin:/media:Z
-    ports:
-      - 8096:8096
+    expose:
+      - 8096
 
 networks:
   docker-net:
