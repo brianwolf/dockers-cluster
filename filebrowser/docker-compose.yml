@@ -8,6 +8,8 @@ services:
     environment:
       VIRTUAL_HOST: file.lobo.theworkpc.com
       VIRTUAL_PORT: 8080
+      LETSENCRYPT_HOST: file.lobo.theworkpc.com
+      LETSENCRYPT_EMAIL: lobo@gmail.com
     expose:
       - 8080
     volumes:
