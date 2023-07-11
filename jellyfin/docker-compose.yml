@@ -7,10 +7,6 @@ services:
     image: linuxserver/jellyfin:10.8.10
     restart: always
     environment:
-      VIRTUAL_HOST: series.lobo.theworkpc.com
-      VIRTUAL_PORT: 8096
-      LETSENCRYPT_HOST: series.lobo.theworkpc.com
-      LETSENCRYPT_EMAIL: lobo@gmail.com
       PUID: 1000
       PGID: 1000
       TZ: America/Argentina/Buenos_Aires
