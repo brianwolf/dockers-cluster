@@ -13,7 +13,7 @@ services:
       JELLYFIN_PublishedServerUrl: 152.171.157.88
     volumes:
       - jellyfin:/config
-      - /home/brian/volumes/jellyfin:/media:Z
+      - /media/sda/volumes/jellyfin:/media:Z
     expose:
       - 8096
     networks:

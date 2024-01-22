@@ -8,7 +8,7 @@ services:
     expose:
       - 8080
     volumes:
-      - /home/brian/volumes/:/data:Z
+      - /media/sda/volumes/:/data:Z
       - filebrowser:/config
       - filebrowser:/database.db
       - filebrowser:/.filebrowser.json
