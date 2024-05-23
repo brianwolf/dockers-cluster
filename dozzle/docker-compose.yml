@@ -12,7 +12,6 @@ services:
       - docker-net
     expose:
       - 8080
-    command: -H unix:///var/run/docker.sock
 
 networks:
   docker-net:
