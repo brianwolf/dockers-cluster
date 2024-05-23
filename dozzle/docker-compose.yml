@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  dozzle:
+    image: amir20/dozzle:v6.6.3
+    container_name: dozzle
+    hostname: dozzle
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - docker-net
+    expose:
+      - 8080
+    command: -H unix:///var/run/docker.sock
+
+networks:
+  docker-net:
+    name: docker-net
+    external: true
