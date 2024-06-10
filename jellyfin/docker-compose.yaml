@@ -4,13 +4,12 @@ services:
   jellyfin:
     container_name: jellyfin
     hostname: jellyfin
-    image: linuxserver/jellyfin:10.8.10
+    image: jellyfin/jellyfin:10.9.6
     restart: always
     environment:
       PUID: 1000
       PGID: 1000
       TZ: America/Argentina/Buenos_Aires
-      JELLYFIN_PublishedServerUrl: 152.171.157.88
     volumes:
       - jellyfin:/config
       - /media/sda/volumes/jellyfin:/media:Z
