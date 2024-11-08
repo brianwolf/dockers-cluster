@@ -14,6 +14,8 @@ services:
       - 9000
     volumes:
       - sonar:/opt/sonarqube
+    networks:
+      - docker-net
     depends_on:
       - sonar-postgres
 
@@ -29,6 +31,8 @@ services:
       - 5432
     volumes:
       - sonar-postgres:/var/lib/postgresql/data
+    networks:
+      - docker-net
     healthcheck:
       start_period: 6s
 
@@ -39,3 +43,8 @@ volumes:
   sonar-postgres:
     name: sonar-postgres
     external: false
+
+networks:
+  docker-net:
+    name: docker-net
+    external: true

@@ -19,3 +19,8 @@ volumes:
   jellyfin:
     name: jellyfin
     external: false
+
+networks:
+  docker-net:
+    name: docker-net
+    external: true

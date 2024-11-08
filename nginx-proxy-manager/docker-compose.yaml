@@ -12,8 +12,15 @@ services:
     volumes:
       - nginx-proxy-manager:/data
       - nginx-proxy-manager:/etc/letsencrypt
+    networks:
+      - docker-net
 
 volumes:
   nginx-proxy-manager:
     name: nginx-proxy-manager
     external: false
+
+networks:
+  docker-net:
+    name: docker-net
+    external: true

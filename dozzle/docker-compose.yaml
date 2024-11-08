@@ -5,8 +5,14 @@ services:
     image: amir20/dozzle:v6.6.3
     container_name: dozzle
     hostname: dozzle
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-
     expose:
       - 8080
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - docker-net
+
+networks:
+  docker-net:
+    name: docker-net
+    external: true

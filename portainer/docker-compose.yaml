@@ -11,8 +11,15 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - portainer:/data:rw
+    networks:
+      - docker-net
 
 volumes:
   portainer:
     name: portainer
     external: false
+
+networks:
+  docker-net:
+    name: docker-net
+    external: true

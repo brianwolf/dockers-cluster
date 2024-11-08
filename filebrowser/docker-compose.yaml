@@ -12,8 +12,15 @@ services:
       - filebrowser:/config
       - filebrowser:/database.db
       - filebrowser:/.filebrowser.json
-
+    networks:
+      - docker-net
+      
 volumes:
   filebrowser:
     name: filebrowser
     external: false
+
+networks:
+  docker-net:
+    name: docker-net
+    external: true
