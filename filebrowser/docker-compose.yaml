@@ -5,6 +5,7 @@ services:
     image: hurlenko/filebrowser:v2.31.2
     container_name: filebrowser
     hostname: filebrowser
+    restart: always
     expose:
       - 8080
     volumes:

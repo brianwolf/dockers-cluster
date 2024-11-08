@@ -5,6 +5,7 @@ services:
     image: portainer/portainer-ce:2.21.4
     container_name: portainer
     hostname: portainer
+    restart: always
     expose:
       - 9000
       - 8000

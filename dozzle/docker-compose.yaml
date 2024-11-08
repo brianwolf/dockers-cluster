@@ -5,6 +5,7 @@ services:
     image: amir20/dozzle:v6.6.3
     container_name: dozzle
     hostname: dozzle
+    restart: always
     expose:
       - 8080
     volumes:

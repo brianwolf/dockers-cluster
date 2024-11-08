@@ -5,6 +5,7 @@ services:
     image: jellyfin/jellyfin:10.10.1
     container_name: jellyfin
     hostname: jellyfin
+    restart: always
     environment:
       PUID: 1000
       PGID: 1000
