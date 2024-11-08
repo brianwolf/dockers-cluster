@@ -2,26 +2,18 @@ version: "3.8"
 
 services:
   jellyfin:
+    image: jellyfin/jellyfin:10.10.1
     container_name: jellyfin
     hostname: jellyfin
-    image: jellyfin/jellyfin:10.9.6
-    restart: always
     environment:
       PUID: 1000
       PGID: 1000
       TZ: America/Argentina/Buenos_Aires
+    expose:
+      - 8096
     volumes:
       - jellyfin:/config
       - /media/sda/volumes/jellyfin:/media:Z
-    expose:
-      - 8096
-    networks:
-      - docker-net
-
-networks:
-  docker-net:
-    name: docker-net
-    external: true
 
 volumes:
   jellyfin:

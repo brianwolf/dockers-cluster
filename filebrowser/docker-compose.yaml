@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   filebrowser:
-    image: hurlenko/filebrowser
+    image: hurlenko/filebrowser:v2.31.2
     container_name: filebrowser
     hostname: filebrowser
     expose:
@@ -12,13 +12,6 @@ services:
       - filebrowser:/config
       - filebrowser:/database.db
       - filebrowser:/.filebrowser.json
-    networks:
-      - docker-net
-
-networks:
-  docker-net:
-    name: docker-net
-    external: true
 
 volumes:
   filebrowser:
