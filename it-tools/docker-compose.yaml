@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  it-tools:
+    image: ghcr.io/corentinth/it-tools:2024.10.22-7ca5933
+    container_name: it-tools
+    hostname: it-tools
+    restart: always
+    expose:
+      - 80
+    networks:
+      - docker-net
+
+networks:
+  docker-net:
+    name: docker-net
+    external: true
