@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  rober:
+    image: ghcr.io/brianwolf/dockers-cluster-rober:latest
+    container_name: rober
+    hostname: rober
+    restart: always
+    expose:
+      - 80
+    networks:
+      - docker-net
+
+networks:
+  docker-net:
+    name: docker-net
+    external: true
