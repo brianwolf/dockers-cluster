@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  excalidraw:
+    image: docker.io/excalidraw/excalidraw:latest
+    container_name: excalidraw
+    hostname: excalidraw
+    restart: always
+    expose:
+      - 80
+    networks:
+      - docker-net
+
+networks:
+  docker-net:
+    name: docker-net
+    external: true
