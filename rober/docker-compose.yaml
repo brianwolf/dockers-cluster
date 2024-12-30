@@ -10,6 +10,8 @@ services:
       - 80
     networks:
       - docker-net
+    volumes:
+      - ./data.json:/usr/share/nginx/html/data.json
 
 networks:
   docker-net:
