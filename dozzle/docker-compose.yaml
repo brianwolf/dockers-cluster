@@ -1,8 +1,13 @@
-version: "3.8"
+name: dozzle
+
+networks:
+  docker-net:
+    name: docker-net
+    external: true
 
 services:
   dozzle:
-    image: amir20/dozzle:v6.6.3
+    image: amir20/dozzle:v8.11.3
     container_name: dozzle
     hostname: dozzle
     restart: always
@@ -12,8 +17,3 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     networks:
       - docker-net
-
-networks:
-  docker-net:
-    name: docker-net
-    external: true
