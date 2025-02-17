@@ -47,16 +47,6 @@
         ]
     },
     {
-        "title": "Sonarqube",
-        "link": "https://sonar.lobezzzno.com.ar/",
-        "description": "Analizador de calidad de código",
-        "image": "https://www.returngis.net/wp-content/uploads/2023/10/sonarqube-logo.png",
-        "categories": [
-            "usuario",
-            "programación"
-        ]
-    },
-    {
         "title": "Portainer",
         "link": "https://portainer.lobezzzno.com.ar/",
         "description": "Herramienta para ver el estado de los contenedores",
