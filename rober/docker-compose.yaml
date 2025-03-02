@@ -1,19 +1,21 @@
-version: "3.8"
-
-services:
-  rober:
-    image: docker.io/brianwolf94/dockers-cluster-rober:latest
-    container_name: rober
-    hostname: rober
-    restart: always
-    expose:
-      - 80
-    networks:
-      - docker-net
-    volumes:
-      - ./data.json:/usr/share/nginx/html/data.json
+name: rober
 
 networks:
   docker-net:
     name: docker-net
     external: true
+
+services:
+  rober:
+    image: docker.io/brianwolf94/dockers-cluster-rober:20250302
+    container_name: rober
+    hostname: rober
+    restart: always
+    # expose:
+    #   - 80
+    ports:
+      - 8080:80
+    networks:
+      - docker-net
+    volumes:
+      - ./data.json:/usr/share/nginx/html/assets/data.json

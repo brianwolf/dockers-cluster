@@ -3,16 +3,16 @@
         "title": "Nginx",
         "link": "https://nginx.lobezzzno.com.ar/",
         "description": "Reverse proxy para los contenedores desplegados",
-        "image": "https://nginx.lobezzzno.com.ar/images/logo-text-vertical-grey.png",
+        "image": "assets/images/nginx.png",
         "categories": [
             "admin"
         ]
     },
     {
-        "title": "File Browser",
+        "title": "Filebrowser",
         "link": "https://files.lobezzzno.com.ar/",
         "description": "Administrador de archivos en la nube",
-        "image": "https://files.lobezzzno.com.ar/static/img/logo.svg",
+        "image": "assets/images/filebrowser.png",
         "categories": [
             "usuario"
         ]
@@ -21,7 +21,7 @@
         "title": "It-Tools",
         "link": "https://tools.lobezzzno.com.ar/",
         "description": "Herramientas varias muy útiles para la gente de sistemas",
-        "image": "https://tools.lobezzzno.com.ar/android-chrome-192x192.png",
+        "image": "assets/images/it-tools.png",
         "categories": [
             "usuario",
             "programación"
@@ -31,7 +31,7 @@
         "title": "Dozzle",
         "link": "https://logs.lobezzzno.com.ar/",
         "description": "Herramienta para ver los logs de los contenedores",
-        "image": "https://developer.asustor.com/uploadIcons/0020_117518_1660879946_dozzle_256.png",
+        "image": "assets/images/dozzle.png",
         "categories": [
             "admin"
         ]
@@ -40,7 +40,7 @@
         "title": "Jellyfin",
         "link": "https://series.lobezzzno.com.ar/",
         "description": "Mi propio Netflix, tiene series y películas",
-        "image": "https://www.dockhunt.com/_next/image?url=https%3A%2F%2Fdockhunt-images.nyc3.cdn.digitaloceanspaces.com%2F4b054cbd-4ede-4f5e-8192-b1af71698ea0&w=256&q=75",
+        "image": "assets/images/jellyfin.webp",
         "categories": [
             "usuario",
             "ocio"
@@ -50,7 +50,7 @@
         "title": "Portainer",
         "link": "https://portainer.lobezzzno.com.ar/",
         "description": "Herramienta para ver el estado de los contenedores",
-        "image": "https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,c_fill,w_200,h_200/https://api.charmhub.io/api/v1/media/download/charm_Owpj9CsDEMZwVtup3ZTxxs0FtyvDqb2o_icon_5cef79c2d18f67464f39c8f2cf2d7ebb815b0071f04d3ffbb94f49fddd3ab666.png",
+        "image": "assets/images/portainer.webp",
         "categories": [
             "admin"
         ]
@@ -59,10 +59,9 @@
         "title": "Excalidraw",
         "link": "https://paint.lobezzzno.com.ar/",
         "description": "Herramienta para dibujar graficos similar a draw.io",
-        "image": "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_4faa9d4c43f2c79f9bee4a0ac10bd9ec/excalidraw.png",
+        "image": "assets/images/excalidraw.png",
         "categories": [
-            "usuario",
-            "programación"
+            "usuario"
         ]
     }
 ]
