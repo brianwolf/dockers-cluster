@@ -1,5 +1,9 @@
-version: "3.8"
+name: excalidraw
 
+networks:
+  docker-net:
+    name: docker-net
+    external: true
 services:
   excalidraw:
     image: docker.io/excalidraw/excalidraw:latest
@@ -10,8 +14,3 @@ services:
       - 80
     networks:
       - docker-net
-
-networks:
-  docker-net:
-    name: docker-net
-    external: true

@@ -11,10 +11,8 @@ services:
     container_name: rober
     hostname: rober
     restart: always
-    # expose:
-    #   - 80
-    ports:
-      - 8080:80
+    expose:
+      - 80
     networks:
       - docker-net
     volumes:

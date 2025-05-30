@@ -1,8 +1,18 @@
-version: "3.8"
+name: portainer
+
+volumes:
+  portainer:
+    name: portainer
+    external: false
+
+networks:
+  docker-net:
+    name: docker-net
+    external: true
 
 services:
   portainer:
-    image: portainer/portainer-ce:2.21.4
+    image: portainer/portainer-ce:2.30.1
     container_name: portainer
     hostname: portainer
     restart: always
@@ -14,13 +24,3 @@ services:
       - portainer:/data:rw
     networks:
       - docker-net
-
-volumes:
-  portainer:
-    name: portainer
-    external: false
-
-networks:
-  docker-net:
-    name: docker-net
-    external: true

@@ -1,4 +1,14 @@
-version: "3.8"
+name: nginx-proxy-manager
+
+volumes:
+  nginx-proxy-manager:
+    name: nginx-proxy-manager
+    external: false
+
+networks:
+  docker-net:
+    name: docker-net
+    external: true
 
 services:
   nginx-proxy-manager:
@@ -15,13 +25,3 @@ services:
       - nginx-proxy-manager:/etc/letsencrypt
     networks:
       - docker-net
-
-volumes:
-  nginx-proxy-manager:
-    name: nginx-proxy-manager
-    external: false
-
-networks:
-  docker-net:
-    name: docker-net
-    external: true

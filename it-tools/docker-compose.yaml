@@ -1,4 +1,9 @@
-version: "3.8"
+name: it-tools
+
+networks:
+  docker-net:
+    name: docker-net
+    external: true
 
 services:
   it-tools:
@@ -10,8 +15,3 @@ services:
       - 80
     networks:
       - docker-net
-
-networks:
-  docker-net:
-    name: docker-net
-    external: true
