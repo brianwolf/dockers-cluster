@@ -17,3 +17,4 @@ services:
       - docker-net
     volumes:
       - ./data.json:/usr/share/nginx/html/assets/data.json
+      - ./images:/usr/share/nginx/html/assets/images

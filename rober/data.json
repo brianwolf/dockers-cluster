@@ -63,5 +63,15 @@
         "categories": [
             "usuario"
         ]
+    },
+    {
+        "title": "Navidrome",
+        "link": "https://music.lobezzzno.com.ar/",
+        "description": "Mi propio Spotify, tiene música",
+        "image": "assets/images/navidrome.png",
+        "categories": [
+            "usuario",
+            "ocio"
+        ]
     }
 ]

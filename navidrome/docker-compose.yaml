@@ -1,0 +1,25 @@
+name: navidrome
+
+volumes:
+  navidrome:
+    name: navidrome
+    external: false
+
+networks:
+  docker-net:
+    name: docker-net
+    external: true
+
+services:
+  navidrome:
+    image: deluan/navidrome:0.56.1
+    container_name: navidrome
+    hostname: navidrome
+    restart: always
+    expose:
+      - 4533
+    volumes:
+      - navidrome:/data:rw
+      - /media/sda/volumes/navidrome:/music:Z
+    networks:
+      - docker-net
