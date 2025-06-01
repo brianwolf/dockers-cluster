@@ -7,7 +7,7 @@ networks:
 
 services:
   rober:
-    image: docker.io/brianwolf94/dockers-cluster-rober:20250302
+    image: docker.io/brianwolf94/dockers-cluster-rober:20250601
     container_name: rober
     hostname: rober
     restart: always
