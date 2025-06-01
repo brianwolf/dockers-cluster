@@ -1,4 +1,4 @@
-nane: jellyfin
+name: jellyfin
 
 volumes:
   jellyfin:
