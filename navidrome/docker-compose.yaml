@@ -33,4 +33,4 @@ services:
       - /media/sda/volumes/navidrome:/music:Z
     networks:
       - docker-net
-    command: [ "/bin/bash", "-c", "cd /home/src/ && pip3 install -r requirements.txt && python3 script.py /music" ]
+    command: [ "/bin/bash", "-c", "cd /home/src/ && pip3 install -r requirements.txt && python3 script.py /music > edit_metadata_songs.log" ]

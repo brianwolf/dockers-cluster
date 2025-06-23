@@ -19,17 +19,24 @@ paths = [
 
 for p in paths:
 
-    print(f"- {p}")
-
     try:
         music = music_tag.load_file(p)
 
-        music['title'] = p.split('/')[-1].split('.')[0]
-        music['album'] = p.split('/')[-2]
-        music['artist'] = p.split('/')[-3]
-        # music['genre'] = p.split('/')[-4]
+        folders = p.split('/')[1:]
+
+        music['title'] = folders[-1].split('.')[0]
+        music['genre'] = folders[2]
+
+        if len(folders) >= 2:
+            music['album'] = folders[-2]
+
+        if len(folders) >= 3:
+            music['artist'] = folders[-3]
 
         music.save()
 
+        print(f"- {p} - OK")
+
     except Exception as _:
+        print(f"- {p} - ERROR")
         print(traceback.format_exc())
