@@ -27,6 +27,7 @@ services:
   edit_metadata_songs:
     image: python:3.12-slim
     container_name: edit_metadata_songs
+    hostname: edit_metadata_songs
     volumes:
       - ./python/:/home/src/
       - /media/sda/volumes/navidrome:/music:Z
