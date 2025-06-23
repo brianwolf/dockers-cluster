@@ -23,3 +23,11 @@ services:
       - /media/sda/volumes/navidrome:/music:Z
     networks:
       - docker-net
+
+  edit_metadata_songs:
+    image: python:3.12-slim
+    container_name: edit_metadata_songs
+    volumes:
+      - ./python/:/home/src/
+      - /media/sda/volumes/navidrome:/music:Z
+    command: [ "/bin/bash", "-c", "cd /home/src/ && pip3 install -r requirements.txt && python3 script.py /music" ]
