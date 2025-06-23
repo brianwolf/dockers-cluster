@@ -25,7 +25,7 @@ for p in paths:
         folders = p.split('/')[1:]
 
         music['title'] = folders[-1].split('.')[0]
-        music['genre'] = folders[2]
+        music['genre'] = folders[1]
 
         if len(folders) >= 2:
             music['album'] = folders[-2]
