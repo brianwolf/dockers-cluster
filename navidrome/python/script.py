@@ -1,5 +1,6 @@
 import sys
 from pathlib import Path
+import traceback
 
 import music_tag
 
@@ -18,11 +19,17 @@ paths = [
 
 for p in paths:
 
-    music = music_tag.load_file(p)
+    print(f"- {p}")
 
-    music['title'] = p.split('/')[-1].split('.')[0]
-    music['album'] = p.split('/')[-2]
-    music['artist'] = p.split('/')[-3]
-    music['genre'] = p.split('/')[-4]
+    try:
+        music = music_tag.load_file(p)
 
-    music.save()
+        music['title'] = p.split('/')[-1].split('.')[0]
+        music['album'] = p.split('/')[-2]
+        music['artist'] = p.split('/')[-3]
+        # music['genre'] = p.split('/')[-4]
+
+        music.save()
+
+    except Exception as _:
+        print(traceback.format_exc())
