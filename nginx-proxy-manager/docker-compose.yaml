@@ -12,7 +12,7 @@ networks:
 
 services:
   nginx-proxy-manager:
-    image: jc21/nginx-proxy-manager:2.12.1
+    image: jc21/nginx-proxy-manager:2.13.5
     container_name: nginx-proxy-manager
     hostname: nginx-proxy-manager
     restart: always

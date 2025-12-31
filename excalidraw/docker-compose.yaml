@@ -6,7 +6,7 @@ networks:
     external: true
 services:
   excalidraw:
-    image: docker.io/excalidraw/excalidraw:latest
+    image: docker.io/excalidraw/excalidraw:sha-4bfc5bb
     container_name: excalidraw
     hostname: excalidraw
     restart: always

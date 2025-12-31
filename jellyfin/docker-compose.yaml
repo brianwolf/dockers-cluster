@@ -13,6 +13,8 @@ networks:
 services:
   jellyfin:
     image: jellyfin/jellyfin:10.10.1
+    # cambio la imagen, probar !!!!
+    # image: ghcr.io/jellyfin/jellyfin:2025122905
     container_name: jellyfin
     hostname: jellyfin
     restart: always
