@@ -21,7 +21,7 @@ services:
       - 81:81
       - 443:443
     environment:
-      DISABLE_IPV6: true
+      DISABLE_IPV6: "true"
     volumes:
       - nginx-proxy-manager:/data
       - nginx-proxy-manager:/etc/letsencrypt

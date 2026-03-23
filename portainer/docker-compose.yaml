@@ -12,12 +12,13 @@ networks:
 
 services:
   portainer:
-    image: portainer/portainer-ce:2.33.6
+    image: portainer/portainer-ce:2.39.1
     container_name: portainer
     hostname: portainer
     restart: always
     expose:
       - 9000
+      - 9443
       - 8000
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
