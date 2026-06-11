@@ -24,7 +24,7 @@
         "image": "assets/images/it-tools.png",
         "categories": [
             "usuario",
-            "programación"
+            "trabajo"
         ]
     },
     {
@@ -38,7 +38,7 @@
     },
     {
         "title": "Jellyfin",
-        "link": "https://series.lobezzzno.com.ar/",
+        "link": "https://movies.lobezzzno.com.ar/",
         "description": "Mi propio Netflix, tiene series y películas",
         "image": "assets/images/jellyfin.webp",
         "categories": [
@@ -61,7 +61,8 @@
         "description": "Herramienta para dibujar graficos similar a draw.io",
         "image": "assets/images/excalidraw.png",
         "categories": [
-            "usuario"
+            "usuario",
+            "trabajo"
         ]
     },
     {
@@ -69,6 +70,16 @@
         "link": "https://music.lobezzzno.com.ar/",
         "description": "Mi propio Spotify, tiene música",
         "image": "assets/images/navidrome.png",
+        "categories": [
+            "usuario",
+            "ocio"
+        ]
+    },
+    {
+        "title": "Kavita",
+        "link": "https://books.lobezzzno.com.ar/",
+        "description": "Servidor de libros, tiene cómics y novelas",
+        "image": "assets/images/kavita.png",
         "categories": [
             "usuario",
             "ocio"

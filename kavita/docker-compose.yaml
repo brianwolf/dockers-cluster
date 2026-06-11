@@ -1,0 +1,25 @@
+name: kavita
+
+networks:
+  docker-net:
+    name: docker-net
+    external: true
+
+volumes:
+  kavita:
+    name: kavita
+    external: false
+
+services:
+  kavita:
+    image: linuxserver/kavita:0.9.0
+    container_name: kavita
+    hostname: kavita
+    restart: always
+    expose:
+      - 5000
+    volumes:
+      - /media/sda/volumes/kavita:/books:Z
+      - kavita:/config:Z
+    networks:
+      - docker-net
