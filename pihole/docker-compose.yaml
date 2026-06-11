@@ -1,0 +1,43 @@
+name: pihole
+
+networks:
+  docker-net:
+    name: docker-net
+    external: true
+
+volumes:
+  pihole:
+    name: pihole
+    external: false
+
+services:
+  pihole:
+    image: pihole/pihole:2026.05.0
+    container_name: pihole
+    hostname: pihole
+    restart: always
+    environment:
+      TZ: 'America/Argentina/Buenos_Aires'
+      FTLCONF_webserver_api_password: 'Lobezzzno.123'
+      FTLCONF_dns_listeningMode: 'ALL'
+    cap_add:
+      - NET_ADMIN
+      - SYS_TIME
+      - SYS_NICE
+    expose:
+      - 80
+      # - 53
+      - 443
+      - 67
+      - 123
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      # - "80:80/tcp"
+      # - "443:443/tcp"
+      # - "67:67/udp"
+      # - "123:123/udp"
+    volumes:
+      - pihole:/etc/pihole
+    networks:
+      - docker-net
