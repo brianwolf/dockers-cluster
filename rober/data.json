@@ -84,5 +84,14 @@
             "usuario",
             "ocio"
         ]
+    },
+    {
+        "title": "Pihole",
+        "link": "https://pihole.lobezzzno.com.ar/admin/",
+        "description": "Servidor de DNS con bloqueador de publicidad, mejora la velocidad de navegación y la seguridad",
+        "image": "assets/images/pihole.png",
+        "categories": [
+            "admin"
+        ]
     }
 ]
