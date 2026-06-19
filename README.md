@@ -22,7 +22,7 @@
     mkdir /media/sda
     ```
 
-3) Modificar el arhivo **/etc/fstab** y agregar lo siguiente
+3) Modificar el arhivo `/etc/fstab` y agregar lo siguiente
 
     ```bash
     UUID=<UUID> /media/sda ext4  defaults   0   0
@@ -32,6 +32,15 @@
 
     ```bash
     sudo findmnt --verify
+    ```
+
+### DNS con pihole
+
+1) Deshabilitar el dns de linux para que solo funcione el de pihole
+
+    ```bash
+    sudo systemctl stop systemd-resolved
+    sudo systemctl disable systemd-resolved
     ```
 
 ---
