@@ -18,7 +18,7 @@ services:
     restart: always
     environment:
       TZ: 'America/Argentina/Buenos_Aires'
-      FTLCONF_webserver_api_password: 'Lobezzzno.123'
+      FTLCONF_webserver_api_password: ${PIHOLE_PASS}
       FTLCONF_dns_listeningMode: 'ALL'
     cap_add:
       - NET_ADMIN
